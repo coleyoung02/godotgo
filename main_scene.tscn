@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2xgb0svs5xw6"]
+[gd_scene load_steps=4 format=3 uid="uid://b2xgb0svs5xw6"]
 
 [ext_resource type="Texture2D" uid="uid://81d41njtijjo" path="res://art/uciLine.png" id="1_g4uaj"]
 [ext_resource type="Texture2D" uid="uid://ljl8fi7e5f4g" path="res://art/character.png" id="2_8s8k1"]
-[ext_resource type="Script" path="res://scripts/bike.gd" id="2_jd4kk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vjdw"]
 
@@ -17,20 +16,19 @@ texture = ExtResource("1_g4uaj")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="UciLine/Area2D"]
 polygon = PackedVector2Array(1345, -51, 1332, -83, 1395, -155, 1420, -205, 1411, -254, 1367, -302, 1250, -357, 1160, -371, 1098, -356, 1058, -339, 1039, -332, 1007, -351, 955, -320, 915, -290, 877, -268, 838, -266, 814, -323, 801, -381, 777, -405, 669, -412, 589, -419, 508, -406, 405, -377, 256, -339, 156, -291, 99, -240, 61, -166, 49, -75, -43, -77, -201, -68, -271, -73, -282, -48, -284, 28, -286, 44, -323, 36, -378, 4, -439, -7, -517, -31, -558, -38, -575, -7, -573, 69, -583, 78, -608, 85, -660, 71, -703, 60, -728, 71, -756, 107, -779, 139, -842, 217, -875, 248, -931, 282, -963, 297, -975, 315, -967, 326, -933, 309, -875, 276, -831, 240, -776, 178, -735, 123, -715, 88, -690, 84, -647, 99, -583, 105, -560, 96, -548, 67, -550, 6, -547, -11, -522, -14, -486, 5, -433, 20, -389, 25, -363, 44, -313, 61, -281, 64, -258, 64, -250, 47, -250, -12, -250, -38, -192, -41, -108, -46, 1, -45, 63, -43, 79, -53, 82, -90, 92, -154, 126, -227, 169, -265, 233, -303, 324, -332, 441, -356, 508, -376, 559, -390, 624, -391, 722, -382, 765, -377, 775, -350, 794, -279, 813, -249, 844, -234, 894, -239, 932, -264, 967, -292, 1003, -313, 1029, -305, 1057, -307, 1097, -326, 1161, -341, 1215, -334, 1267, -324, 1311, -302, 1349, -280, 1380, -252, 1393, -218, 1381, -184, 1349, -150, 1315, -120, 1300, -64, 1311, -39, 1340, -30, 1367, -24)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="bike" type="RigidBody2D" parent="."]
 position = Vector2(1386, -7)
 gravity_scale = 0.0
-script = ExtResource("2_jd4kk")
 
-[node name="Character" type="Sprite2D" parent="RigidBody2D"]
+[node name="Character" type="Sprite2D" parent="bike"]
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_8s8k1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bike"]
 scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_1vjdw")
 
-[node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
+[node name="Camera2D" type="Camera2D" parent="bike"]
 
-[connection signal="body_entered" from="UciLine/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="UciLine/Area2D" to="RigidBody2D" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="UciLine/Area2D" to="bike" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="UciLine/Area2D" to="bike" method="_on_area_2d_body_exited"]
