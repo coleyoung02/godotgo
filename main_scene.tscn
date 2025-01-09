@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2xgb0svs5xw6"]
+
+[ext_resource type="Texture2D" uid="uid://81d41njtijjo" path="res://art/uciLine.png" id="1_g4uaj"]
+[ext_resource type="Texture2D" uid="uid://ljl8fi7e5f4g" path="res://art/character.png" id="2_8s8k1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="UciLine" type="Sprite2D" parent="."]
+position = Vector2(1, 14)
+texture = ExtResource("1_g4uaj")
+
+[node name="Character" type="Sprite2D" parent="."]
+position = Vector2(1371, -31)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_8s8k1")

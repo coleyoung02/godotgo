@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://81d41njtijjo"
-path="res://.godot/imported/uciLine.png-1f3871b847e2d982198eb3957ab9d996.ctex"
+path="res://.godot/imported/uciLine.png-eb61f458fc5975d8f3e78eeeaf9a8fac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://uciLine.png"
-dest_files=["res://.godot/imported/uciLine.png-1f3871b847e2d982198eb3957ab9d996.ctex"]
+source_file="res://art/uciLine.png"
+dest_files=["res://.godot/imported/uciLine.png-eb61f458fc5975d8f3e78eeeaf9a8fac.ctex"]
 
 [params]
 
