@@ -19,6 +19,7 @@ polygon = PackedVector2Array(1345, -51, 1332, -83, 1395, -155, 1420, -205, 1411,
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(1386, -7)
+rotation = 5.58505
 gravity_scale = 0.0
 script = ExtResource("2_jd4kk")
 
@@ -31,6 +32,3 @@ scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_1vjdw")
 
 [node name="Camera2D" type="Camera2D" parent="RigidBody2D"]
-
-[connection signal="body_entered" from="UciLine/Area2D" to="RigidBody2D" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="UciLine/Area2D" to="RigidBody2D" method="_on_area_2d_body_exited"]
