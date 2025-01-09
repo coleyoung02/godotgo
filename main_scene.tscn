@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://81d41njtijjo" path="res://art/uciLine.png" id="1_g4uaj"]
 [ext_resource type="Texture2D" uid="uid://ljl8fi7e5f4g" path="res://art/character.png" id="2_8s8k1"]
-[ext_resource type="Script" path="res://bike.gd" id="2_jd4kk"]
+[ext_resource type="Script" path="res://scripts/bike.gd" id="2_jd4kk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1vjdw"]
 
